@@ -2,7 +2,7 @@ import plotly.graph_objects as go
 from plotly.offline import iplot
 import pandas as pd
 import streamlit as st
-popu = pd.read_csv("C://Users//KOVVO//Desktop//Pop//world_population.csv")
+popu = pd.read_csv("world_population.csv")
 popu.rename(columns={"Country/Territory":"Country","CCA3":"Code"},inplace=True)
 popu.head()
 
