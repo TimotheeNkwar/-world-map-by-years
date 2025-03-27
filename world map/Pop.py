@@ -5,7 +5,7 @@ import streamlit as st
 popu = pd.read_csv("world_population.csv")
 popu.rename(columns={"Country/Territory":"Country","CCA3":"Code"},inplace=True)
 popu.head()
-
+st.write("MAP OF THE WORLD")
 popu['Country_Capital'] = popu['Country'] + ' - ' + popu['Capital']+ ' - ' + popu['Continent']
 popu['Combined_Z'] = popu['1970 Population'] + popu['World Population Percentage']
 #natural earth,conic equal area,azimuthal equal area,orthographic,mercator
