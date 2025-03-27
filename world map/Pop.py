@@ -8,7 +8,9 @@ popu.rename(columns={"Country/Territory":"Country","CCA3":"Code"},inplace=True)
 popu.head()
 
 st.title("World Population By Years")
-st.write("MAP OF THE WORLD")
+
+st.sidebar.title("Filter by Year")
+
 popu['Country_Capital'] = popu['Country'] + ' - ' + popu['Capital']+ ' - ' + popu['Continent']
 popu['Combined_Z'] = popu['1970 Population'] + popu['World Population Percentage']
 #natural earth,conic equal area,azimuthal equal area,orthographic,mercator
