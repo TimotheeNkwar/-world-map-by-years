@@ -165,5 +165,5 @@ fig.update_layout(
     }]
 )
 
-
+# Display the map
 st.plotly_chart(fig, use_container_width=True)
