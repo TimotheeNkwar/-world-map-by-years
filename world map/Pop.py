@@ -3,14 +3,15 @@ from plotly.offline import iplot
 import pandas as pd
 import streamlit as st
 popu = pd.read_csv("world_population.csv")
+
 popu.rename(columns={"Country/Territory":"Country","CCA3":"Code"},inplace=True)
 popu.head()
+
+st.title("World Population By Years")
 st.write("MAP OF THE WORLD")
 popu['Country_Capital'] = popu['Country'] + ' - ' + popu['Capital']+ ' - ' + popu['Continent']
 popu['Combined_Z'] = popu['1970 Population'] + popu['World Population Percentage']
 #natural earth,conic equal area,azimuthal equal area,orthographic,mercator
-
-
 data_1970 = dict(
     type='choropleth',
     locations=popu['Code'],
