@@ -15,7 +15,7 @@ popu['Combined_Z'] = popu['1970 Population'] + popu['World Population Percentage
 #natural earth,conic equal area,azimuthal equal area,orthographic,mercator
 data_1970 = dict(
     type='choropleth',
-    locations=popu['Country'],
+    locations=popu['Code'],
     colorscale="Magma_r",
     z=popu['1970 Population'],
     text=popu['Country_Capital'],
